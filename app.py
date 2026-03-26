@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'healthcare_secret'
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Initialize database so it works on Render with Gunicorn
+# Initialize database on startup for production (Render)
 init_db()
 
 # Expanded symptom database with synonyms
