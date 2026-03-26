@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="hospital-bg">
+    <div class="dashboard-container">
+        <div class="header-section">
+            <h2>🏥 Hospital Live Dashboard</h2>
+            <div class="status-indicator">
+                <span class="dot blink"></span> System Active
+            </div>
+        </div>
+        <div class="alerts-container" id="alerts-container">
+            <!-- Alerts will appear here -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='hospital.js') }}"></script>
+</body>
+</html>
